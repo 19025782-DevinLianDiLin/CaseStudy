@@ -28,6 +28,9 @@ public class bid {
 	public String getseller_email() {
 		return seller_email;
 	}
+	public double getbid_price() {
+		return bid_price;
+	}
 	public void setitem_name(String item_name) {
 		this.item_name = item_name;
 	}
