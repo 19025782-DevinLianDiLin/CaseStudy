@@ -5,7 +5,7 @@ public class bid {
 	private double bid_price;
 	private String seller_email;
 	private String buyer_email;
-	
+	//check
 	public bid(int bid_id, String item_name, String seller_email, String buyer_email, double bid_price) {
 		this.bid_id = bid_id;
 		this.item_name = item_name;
