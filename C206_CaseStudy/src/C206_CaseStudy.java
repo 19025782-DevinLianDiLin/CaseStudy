@@ -1,14 +1,15 @@
 import java.util.ArrayList;
 
+
 public class C206_CaseStudy  {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		ArrayList<bid> bidList = new ArrayList<bid>();
-		bidList.add(new bid(0001,"Apple Watch","John34@gmail.com",null, 0.0 ));
-		bidList.add(new bid(0035,"Off-brand Speaker ","Johnson314@gmail.com",null, 0.0 ));
-		bidList.add(new bid(1256,"6 can cokes ","Harry13@gmail.com",null, 0.0 ));
-		bidList.add(new bid(4622,"Deck of cards ","Joe3333@gmail.com",null, 0.0 ));
+		bidList.add(new bid(1,"Apple Watch","John34@gmail.com",null, 0.0 ));
+		bidList.add(new bid(2,"Off-brand Speaker ","Johnson314@gmail.com",null, 0.0 ));
+		bidList.add(new bid(3,"6 can cokes ","Harry13@gmail.com",null, 0.0 ));
+		bidList.add(new bid(4,"Deck of cards ","Joe3333@gmail.com",null, 0.0 ));
 		int option = 0;
 
 		while (option != 5) {
@@ -37,8 +38,8 @@ public class C206_CaseStudy  {
 				}
 				else if (id == 3) {
 					C206_CaseStudy.deletebidlist(bidList);
-				}
-				else {
+					
+				}else {
 					System.out.println("Option not recognized ");
 				}
 					
@@ -56,6 +57,7 @@ public class C206_CaseStudy  {
 
 		}
 	
+
 		public static void menu() {
 			System.out.println("Application");
 			System.out.println("1. User Account");
@@ -77,17 +79,28 @@ public class C206_CaseStudy  {
 			}
 		}
 		public static void addbidlist (ArrayList<bid> bidlist) {
-			//
+			int a = 5;
+			String b = Helper.readString("Enter name of item");
+			String c = Helper.readString("Enter you email address");
+			while (a != 100000) {
+				bidlist.add(new bid(a, b, c,null,0.0));
+				a++;
+			}
 		}
 		public static void deletebidlist (ArrayList<bid> bidlist) {
-			//
+			int a = Helper.readInt("Enter id of item");
+			bidlist.remove(a);
+			bidlist.add(a,null);
+			} 
+		
 		}
+
 
 	
 
 
 
 
-	}
+	
 
 
